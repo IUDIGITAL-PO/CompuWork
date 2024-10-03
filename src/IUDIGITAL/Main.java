@@ -101,7 +101,7 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Ingrese el nombre del departamento:");
             String nombre = scanner.nextLine();
-            Departamento nuevoDepartamento = new Departamento(listaDepartamentos.size() + 1, nombre);
+            Departamento nuevoDepartamento = new Departamento(nombre);
             listaDepartamentos.add(nuevoDepartamento);
             System.out.println("Departamento creado con éxito.");
         }
