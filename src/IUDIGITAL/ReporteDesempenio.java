@@ -16,7 +16,8 @@ public class ReporteDesempenio {
     }
 
     public void generarReporteIndividual() {
-        System.out.println("Reporte para: " + empleado.nombre);
+        System.out.println("Reporte de desempeño para: " + empleado.nombre + " " + empleado.apellido);
+        System.out.println("Fecha: " + fechaGeneracion);
         System.out.println("Métricas: " + metricas);
     }
 }

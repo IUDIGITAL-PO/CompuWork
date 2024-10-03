@@ -3,15 +3,16 @@ package IUDIGITAL;
 public abstract class Empleado {
     protected int idEmpleado;
     protected String nombre;
-    protected String apellido;  // Nuevo atributo
+    protected String apellido;
     protected String tipoEmpleado;
     protected Departamento departamento;
 
     public Empleado(int idEmpleado, String nombre, String apellido, String tipoEmpleado) {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
-        this.apellido = apellido;  // Asignación del apellido
+        this.apellido = apellido;
         this.tipoEmpleado = tipoEmpleado;
+        this.departamento = null;
     }
 
     public void asignarDepartamento(Departamento departamento) {
@@ -26,34 +27,8 @@ public abstract class Empleado {
 
     @Override
     public String toString() {
-        return "ID: " + idEmpleado + ", Nombre: " + nombre + " " + apellido + ", Tipo: " + tipoEmpleado + ", Departamento: " + (departamento != null ? departamento.getNombre() : "Sin departamento");
-    }
-}
-
-class EmpleadoPermanente extends Empleado {
-    private double salario;
-
-    public EmpleadoPermanente(int idEmpleado, String nombre, String apellido, double salario) {
-        super(idEmpleado, nombre, apellido, "Permanente");
-        this.salario = salario;
-    }
-
-    @Override
-    public void generarReporteDesempeño() {
-        System.out.println("Generar reporte de desempeño para empleado permanente.");
-    }
-}
-
-class EmpleadoTemporal extends Empleado {
-    private double tarifaPorHora;
-
-    public EmpleadoTemporal(int idEmpleado, String nombre, String apellido, double tarifaPorHora) {
-        super(idEmpleado, nombre, apellido, "Temporal");
-        this.tarifaPorHora = tarifaPorHora;
-    }
-
-    @Override
-    public void generarReporteDesempeño() {
-        System.out.println("Generar reporte de desempeño para empleado temporal.");
+        return "ID: " + idEmpleado + ", Nombre: " + nombre + " " + apellido +
+                ", Tipo: " + tipoEmpleado + ", Departamento: " +
+                (departamento != null ? departamento.getNombre() : "Sin departamento");
     }
 }
