@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        SistemaGestionRRHH sistema = new SistemaGestionRRHH();
+        SistemaGestion sistema = new SistemaGestion();
 
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
 
         while (continuar) {
-            System.out.println("\nSistema de Gestión de RRHH:");
+            System.out.println("\nSistema de Gestión de Recursos Humanos:");
             System.out.println("1. Gestionar empleados");
             System.out.println("2. Gestionar departamentos");
             System.out.println("3. Asignar empleado a departamento");

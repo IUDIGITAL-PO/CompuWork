@@ -3,11 +3,11 @@ package IUDIGITAL;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class SistemaGestionRRHH {
+public class SistemaGestion {
     protected ArrayList<Empleado> listaEmpleados;
     protected ArrayList<Departamento> listaDepartamentos;
 
-    public SistemaGestionRRHH() {
+    public SistemaGestion() {
         listaEmpleados = new ArrayList<>();
         listaDepartamentos = new ArrayList<>();
     }
